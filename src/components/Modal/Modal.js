@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import classes from './modal.module.css'
 import Button from '../Button/Button'
+import Input from '../Input/Input';
 
 
 const Modal = ({ handleShow }) => {
@@ -15,11 +16,11 @@ const Modal = ({ handleShow }) => {
     <div className={classes.modalWrapper}></div>
     <div className={classes.modalContent}>
     <Button handleClick={handleShow}>Закрыть модалку</Button>
-    <input 
-    name='add'
-     placeholder='Добавьте таск'
-     onChange={(event) => handleChangeText(event.target.value)}
-      />
+    <Input 
+      name='add'
+      placeholder='добавить таск'
+      change={(e) => handleChangeText(e.target.value)}
+    />
     <Button>Добавить таск</Button>
     </div>
     </React.Fragment>
